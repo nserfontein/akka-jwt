@@ -42,23 +42,14 @@ crossScalaVersions := Seq("2.10.7", "2.11.12", "2.12.9", scalaVersion.value)
 // sbt-bintray options
 licenses += ("Apache-2.0", url(
   "http://www.apache.org/licenses/LICENSE-2.0.txt"))
-bintrayOrganization := Some("innfactory")
-bintrayRepository := "sbt-plugins"
-bintrayPackageLabels := Seq("JWT",
-                            "Scala",
-                            "akka-http",
-                            "cognito",
-                            "oauth2",
-                            "openid",
-                            "auth0")
-bintrayVcsUrl := Some("https://github.com/innFactory/akka-jwt")
-homepage := Some(url("https://github.com/innFactory/akka-jwt"))
+publishTo := Some("Sonatype Snapshots Nexus" at "https://oss.sonatype.org/content/repositories/snapshots")
+homepage := Some(url("https://github.com/nserfontein/akka-jwt"))
 publishMavenStyle := true
 
 pomExtra :=
   <scm>
-    <url>git@github.com:innFactory/akka-jwt.git</url>
-    <connection>scm:git:git@github.com:innFactory/akka-jwt.git</connection>
+    <url>git@github.com:nserfontein/akka-jwt.git</url>
+    <connection>scm:git:git@github.com:nserfontein/akka-jwt.git</connection>
   </scm>
     <developers>
       <developer>
